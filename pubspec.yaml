@@ -1,0 +1,23 @@
+name: abhishek_portfolio
+description: Flutter Web portfolio for Abhishek J Nair (Dark Glass + Animations + Navbar)
+publish_to: 'none'
+version: 1.3.0+1
+
+environment:
+  sdk: '>=2.18.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  google_fonts: ^4.0.3
+  url_launcher: ^6.1.7
+  glassmorphism: ^3.0.0
+  animate_do: ^3.1.2
+  scrollable_positioned_list: ^0.3.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/resume.pdf
+    - assets/profile.jpg
