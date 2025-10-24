@@ -181,7 +181,7 @@ class HeroSection extends StatelessWidget {
             Text("Abhishek J Nair", style: Theme.of(context).textTheme.displaySmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
             const SizedBox(height: 16),
             Text(
-              "Flutter Developer | Building Cross-Platform Apps with Beautiful UI/UX and Robust Architecture",
+              "Flutter Developer |  Building Cross-Platform Apps with Beautiful UI/UX and Robust Architecture",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70),
             ),
