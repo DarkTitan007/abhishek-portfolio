@@ -173,20 +173,27 @@ class HeroSection extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: Center(
-        child: Column(
-          children: [
-            Text("Hi, I'm", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white70)),
-            const SizedBox(height: 8),
-            Text("Abhishek J Nair", style: Theme.of(context).textTheme.displaySmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 16),
-            Text(
-              "Flutter Developer |  Building Cross-Platform Apps with Beautiful UI/UX and Robust Architecture",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70),
+      child: Column(
+        children: [
+          Text("Hi, I'm", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white70)),
+          const SizedBox(height: 8),
+          Text("Abhishek J Nair", style: Theme.of(context).textTheme.displaySmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+          const SizedBox(height: 16),
+          Text(
+            "Flutter Developer |  Building Cross-Platform Apps with Beautiful UI/UX and Robust Architecture",
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white70),
+          ),
+          const SizedBox(height: 24,),
+          ClipOval(
+            child: Image.asset(
+              'assets/profile.jpg',
+              width: 250,
+              height: 250,
+              fit: BoxFit.cover,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -199,7 +206,7 @@ class AboutSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('About Me', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+        Text('About Me', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
         const SizedBox(height: 10),
         const Text(
           "I’m a Flutter Developer with hands-on experience building and maintaining cross-platform applications. "
@@ -221,13 +228,13 @@ class SkillsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final skills = [
-      "Flutter", "Dart", "Firebase", "REST API Integration", "State Management (Bloc, Riverpod)",
+      "Flutter", "Dart", "Firebase", "REST API Integration", "State Management (Bloc, Riverpod, Provider)",
       "OOPs", "MVVM", "C++", "AI & ML", "AWS Cloud", "UI/UX Design"
     ];
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Skills', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+        Text('Skills', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
         const SizedBox(height: 10),
         Wrap(spacing: 10, runSpacing: 10, children: skills.map((s) => Chip(label: Text(s))).toList()),
       ],
@@ -240,7 +247,7 @@ class ExperienceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Experience', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+      Text('Experience', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
       const SizedBox(height: 10),
       _tile("ICICI Lombard GIC Ltd.", "Associate Software Engineer | Aug 2023 – Present", [
         "Developing and maintaining cross-platform functionality using Flutter and Dart.",
@@ -263,7 +270,7 @@ class ExperienceSection extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(org, style: const TextStyle(fontWeight: FontWeight.bold)),
+        Text(org, style: const TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
         Text(role, style: const TextStyle(color: Colors.white70)),
         const SizedBox(height: 6),
         for (final b in bullets) Text("• $b"),
@@ -286,7 +293,7 @@ class ProjectsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Projects', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+        Text('Projects', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
         const SizedBox(height: 10),
         ...projects.map((p) => _projectCard(context, p[0], p[1], p[2])).toList(),
       ],
@@ -320,7 +327,7 @@ class AchievementsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Achievements', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+        Text('Achievements', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
         const SizedBox(height: 10),
         for (final a in achievements) Text("• $a"),
       ],
@@ -333,7 +340,7 @@ class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Contact', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold)),
+      Text('Contact', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold,color: Colors.white)),
       const SizedBox(height: 10),
       const Text("📧 Email: abhisheknair366@gmail.com"),
       const Text("📞 Phone: +91 7879973072"),
@@ -354,7 +361,7 @@ class FooterSection extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       child: Center(
           child: Text("© ${DateTime.now().year} Abhishek J Nair — Built with Flutter",
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white54))),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white))),
     );
   }
 }
